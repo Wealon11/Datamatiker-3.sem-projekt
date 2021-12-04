@@ -1,0 +1,20 @@
+{
+    "env": {
+        "es6": true,
+        "node": true
+    },
+    "extends": "eslint:recommended",
+    "rules": {
+        "semi": "error",
+        "eqeqeq": "error",
+        "curly": "error",
+        "no-console": "off",
+        "no-unused-vars": "warn",
+        "no-var": "error",
+        "space-before-function-paren": [
+            "warn",
+            "never"
+        ],
+        "brace-style": "error"
+    }
+}

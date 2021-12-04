@@ -1,0 +1,24 @@
+CREATE TABLE [dbo].[UserInfo] (
+    [Username] NVARCHAR (50)  NOT NULL,
+    [Password] NVARCHAR (MAX) NOT NULL,
+    PRIMARY KEY CLUSTERED ([Username] ASC)
+);
+
+CREATE TABLE [dbo].[TempDB] (
+    [Id]         INT      IDENTITY (1, 1) NOT NULL,
+    [Dato]       DATETIME NOT NULL,
+    [Temperatur] INT      NOT NULL,
+    [Sensor ID]  NVARCHAR (50) NOT NULL,
+    PRIMARY KEY CLUSTERED ([Id] ASC)
+);
+
+CREATE TABLE [dbo].[Configuration] (
+    [ConfKey]   NVARCHAR (50)  NOT NULL,
+    [ConfValue] NVARCHAR (MAX) NOT NULL,
+    PRIMARY KEY CLUSTERED ([ConfKey] ASC)
+);
+
+CREATE TABLE [dbo].[MailDB] (
+    [Mail] NVARCHAR (50) NOT NULL,
+    PRIMARY KEY CLUSTERED ([Mail] ASC)
+);

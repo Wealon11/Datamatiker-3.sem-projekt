@@ -1,0 +1,47 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+    <title>TONS: Emailkonfiguration</title>
+    <style>
+            table,
+            th,
+            td {
+    
+                border: 1px solid black;
+            }
+            table {
+        border-collapse: collapse;
+        width: 20%;
+    }
+        </style>
+</head>
+<body>
+    <font size=12><b>Email tabel</b></font>
+    <table>
+        <tr>
+            <th>Email</th>
+        </tr>
+        <%mails.forEach(function(mail) {%>
+            <tr>
+                <td>
+                    <%= mail.mail %>
+                </td>
+            </tr>
+        <% })%>
+    </table>
+    <br>
+    <br>
+    <font size=8><b>Tilføj email</b></font>
+    <form action="/mail" method="POST">
+        <input type="text" name="newemail" placeholder="nyt emailnavn"><br>
+        <input type="submit" value="Tilføj email">
+    </form>
+    <br>
+    <br>
+    <font size=8><b>Slet email</b></font>
+    <form action="/mail" method="DELETE">
+        <input type="text" name="emailtodelete" placeholder="email til sletning"><br>
+        <input type="submit" value="Slet email">
+    </form>
+</body>
+</html>

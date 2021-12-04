@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>TONS: Konfiguration af grænseværdi for temperatur</title>
+  <link rel='stylesheet' href='/stylesheets/style.css' />
+</head>
+<body>
+  <h1>Konfiguration af grænseværdi for temperatur</h1>
+  <p>Overstiger den målte temperatur den indstillede grænseværdi sendes notifikation om overophedning.</p>
+  <form action="/" method="POST" >
+    <input type="text" name="maxtemp" placeholder="temperatur i celcius">
+    <input type="submit" value="Ændr grænseværdi">
+  </form>
+  
+  <form action="/logout" method="POST">
+    <input type="submit" value="Log ud">
+  </form>
+  <p><a href="mail">Navigere til mailliste </a></p>
+  <br>
+  <br>
+  <form action="/list" method="GET">
+    <input type="text" name="start" placeholder="startdato for historik"><br>
+    <input type="text" name="end" placeholder="slutdato for historik"><br>
+    <input type="submit" value="Hent temperaturhistorik som liste">
+  </form>
+  <br>
+	<form action="/graph" method="GET">
+		<input type="text" name="start" placeholder="startdato for historik"><br>
+		<input type="text" name="end" placeholder="slutdato for historik"><br>
+		<input type="submit" value="Hent temperaturhistorik som graf">
+	</form>
+</body>
+</html>

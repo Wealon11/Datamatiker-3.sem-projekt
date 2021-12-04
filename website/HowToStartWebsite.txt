@@ -1,0 +1,3 @@
+1) open terminal in VSC
+2) write  $env:SERVICEURL = "http://localhost:57891/Service1.svc/"
+3) write npm start
